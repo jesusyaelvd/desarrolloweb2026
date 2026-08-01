@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Personal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Biblioteca Personal</h1>
+    </header>
+
+    <main class="contenedor">
+
+        <div id="mensaje"></div>
+
+        <section class="formulario">
+
+            <h2>Registrar Libro</h2>
+
+            <form id="formLibro">
+
+                <input
+                    type="hidden"
+                    id="idLibro"
+                >
+
+                <div class="grupo">
+
+                    <label>Título</label>
+
+                    <input
+                        type="text"
+                        id="titulo"
+                        placeholder="Ingrese el título"
+                    >
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>Autor</label>
+
+                    <input
+                        type="text"
+                        id="autor"
+                        placeholder="Ingrese el autor"
+                    >
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>Género</label>
+
+                    <select id="genero">
+
+                        <option value="">Seleccione...</option>
+
+                        <option>Novela</option>
+                        <option>Fantasía</option>
+                        <option>Ciencia Ficción</option>
+                        <option>Terror</option>
+                        <option>Romance</option>
+                        <option>Historia</option>
+                        <option>Drama</option>
+                        <option>Biografía</option>
+                        <option>Otro</option>
+
+                    </select>
+
+                </div>
+
+                <div class="grupo">
+
+                    <label>Año</label>
+
+                    <input
+                        type="number"
+                        id="anio"
+                        placeholder="Ejemplo: 2023"
+                    >
+
+                </div>
+
+                <button id="btnGuardar" type="submit">
+                    Guardar Libro
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="herramientas">
+
+            <h2>Opciones</h2>
+
+            <input
+                type="text"
+                id="buscar"
+                placeholder="Buscar por título..."
+            >
+
+            <select id="filtroGenero">
+
+                <option value="Todos">Todos los géneros</option>
+
+                <option>Novela</option>
+                <option>Fantasía</option>
+                <option>Ciencia Ficción</option>
+                <option>Terror</option>
+                <option>Romance</option>
+                <option>Historia</option>
+                <option>Drama</option>
+                <option>Biografía</option>
+                <option>Otro</option>
+
+            </select>
+
+            <select id="ordenar">
+
+                <option value="">Ordenar por...</option>
+
+                <option value="titulo">
+                    Título (A-Z)
+                </option>
+
+                <option value="anio">
+                    Año (Menor a Mayor)
+                </option>
+
+            </select>
+
+            <h3 id="totalLibros">
+                Total de libros: 0
+            </h3>
+
+        </section>
+
+        <section>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Género</th>
+                        <th>Año</th>
+                        <th>Acciones</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaLibros">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Desarrollado por:
+            <strong>Jesús Yael Vizcaya Domínguez</strong>
+        </p>
+
+        <p>
+            Matrícula:
+            <strong>201194106</strong>
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
