@@ -1,0 +1,52 @@
+/* TABLET - Reducimos sidebar y ajustamos */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .tarjetas-grid {
+        gap: 1rem;
+    }
+}
+
+/* MÓVIL - Grid a 1 columna */
+@media (max-width: 640px) {
+    .dashboard {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-item {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .tarjetas-grid {
+        grid-template-columns: 1fr;
+    }
+}
