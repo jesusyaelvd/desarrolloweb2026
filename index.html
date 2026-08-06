@@ -3,186 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca Personal</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>Currículum Vitae Digital</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-    <header>
-        <h1>Biblioteca Personal</h1>
-    </header>
+    <header class="encabezado">
 
-    <main class="contenedor">
+    <img src="foto.jpeg" alt="Foto de perfil" class="foto-perfil">
 
-        <div id="mensaje"></div>
+    <div class="datos-header">
+        <h1>Jesús Yael Vizcaya Domínguez</h1>
+        <h2>Desarrollador Web</h2>
 
-        <section class="formulario">
+        <p><strong>Correo:</strong> jesusyaelvd@gmail.com</p>
+        <p><strong>Teléfono:</strong> 4424686930</p>
+    </div>
 
-            <h2>Registrar Libro</h2>
+</header>
 
-            <form id="formLibro">
+    <nav>
+        <ul>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#formacion">Formación</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+        </ul>
+    </nav>
 
-                <input
-                    type="hidden"
-                    id="idLibro"
-                >
+    <main>
 
-                <div class="grupo">
-
-                    <label>Título</label>
-
-                    <input
-                        type="text"
-                        id="titulo"
-                        placeholder="Ingrese el título"
-                    >
-
-                </div>
-
-                <div class="grupo">
-
-                    <label>Autor</label>
-
-                    <input
-                        type="text"
-                        id="autor"
-                        placeholder="Ingrese el autor"
-                    >
-
-                </div>
-
-                <div class="grupo">
-
-                    <label>Género</label>
-
-                    <select id="genero">
-
-                        <option value="">Seleccione...</option>
-
-                        <option>Novela</option>
-                        <option>Fantasía</option>
-                        <option>Ciencia Ficción</option>
-                        <option>Terror</option>
-                        <option>Romance</option>
-                        <option>Historia</option>
-                        <option>Drama</option>
-                        <option>Biografía</option>
-                        <option>Otro</option>
-
-                    </select>
-
-                </div>
-
-                <div class="grupo">
-
-                    <label>Año</label>
-
-                    <input
-                        type="number"
-                        id="anio"
-                        placeholder="Ejemplo: 2023"
-                    >
-
-                </div>
-
-                <button id="btnGuardar" type="submit">
-                    Guardar Libro
-                </button>
-
-            </form>
-
+        <section id="informacion">
+            <article>
+                <h3>Información Personal</h3>
+                <p><strong>Lugar de residencia:</strong> Querétaro, México</p>
+                <p><strong>Edad:</strong> 25 años</p>
+                <p><strong>Correo:</strong> jesusyaelvd@gmail.com</p>
+                <p><strong>WhatsApp: </strong><a href="https://wa.me">4424686930</a></p>
+                <p><strong>LinkedIn: </strong> <a href="https://mx.linkedin.com/">Yael Vizcaya</a></p>
+            </article>
         </section>
 
-        <section class="herramientas">
-
-            <h2>Opciones</h2>
-
-            <input
-                type="text"
-                id="buscar"
-                placeholder="Buscar por título..."
-            >
-
-            <select id="filtroGenero">
-
-                <option value="Todos">Todos los géneros</option>
-
-                <option>Novela</option>
-                <option>Fantasía</option>
-                <option>Ciencia Ficción</option>
-                <option>Terror</option>
-                <option>Romance</option>
-                <option>Historia</option>
-                <option>Drama</option>
-                <option>Biografía</option>
-                <option>Otro</option>
-
-            </select>
-
-            <select id="ordenar">
-
-                <option value="">Ordenar por...</option>
-
-                <option value="titulo">
-                    Título (A-Z)
-                </option>
-
-                <option value="anio">
-                    Año (Menor a Mayor)
-                </option>
-
-            </select>
-
-            <h3 id="totalLibros">
-                Total de libros: 0
-            </h3>
-
+        <section id="perfil">
+            <article>
+                <h3>Perfil Profesional</h3>
+                <p>
+                    Estudiante proactivo de Ingeniería en Sistemas Computacionales de 7° Cuatrimestre de la Universidad Internacional de
+                    Querétaro (UNIQ). Entusiasta de la ciberseguridad con interés en programación, hacking ético, creación e inovación de
+                    sistemas. En constante aprendizaje sobre herramientas y buenas prácticas informáticas.
+                </p>
+            </article>
         </section>
 
-        <section>
+        <section id="experiencia">
+            <h3>Experiencia Laboral</h3>
 
-            <table>
+            <div class="contenedor">
 
-                <thead>
+                <article class="tarjeta">
+                    <h4>Auxiliar de Soporte Técnico</h4>
+                    <p><strong>Empresa:</strong> TecnoByte Querétaro</p>
+                    <p><strong>Periodo:</strong> 2023 - 2024</p>
+                    <p>
+                        Instalación de software, mantenimiento de equipos
+                        y atención a usuarios.
+                    </p>
+                </article>
 
-                    <tr>
+                <article class="tarjeta">
+                    <h4>Practicante de Desarrollo Web</h4>
+                    <p><strong>Empresa:</strong> Tata Consultancy Services (TCS)</p>
+                    <p><strong>Periodo:</strong> 2024 - 2026</p>
+                    <p>
+                        Desarrollo de páginas web utilizando HTML y CSS,
+                        apoyo en diseño responsivo.
+                    </p>
+                </article>
 
-                        <th>Título</th>
-                        <th>Autor</th>
-                        <th>Género</th>
-                        <th>Año</th>
-                        <th>Acciones</th>
-
-                    </tr>
-
-                </thead>
-
-                <tbody id="tablaLibros">
-
-                </tbody>
-
-            </table>
-
+            </div>
         </section>
+
+        <section id="formacion">
+            <h3>Formación Académica</h3>
+
+            <div class="contenedor">
+
+                <article class="tarjeta">
+                    <h4>Ingeniería en Sistemas Computacionales</h4>
+                    <p>Universidad Internacional de Querétaro</p>
+                    <p>2023 - Actualidad</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h4>Curso de Ciberseguridad</h4>
+                    <p>Curso de ciberseguridad impartido por el Centro Especializado en Seguridad Integral</p>
+                    <p>Febrero 2024</p>
+                    <p><a href="https://drive.google.com/file/d/1qj7tgp4A8O9DaCgPL-sbH8pZljjSLHiy/view?usp=sharing"style="text-decoration: none;">Ver constancia</a></p>
+                </article>
+
+                <article class="tarjeta">
+                    <h4>Técnico en Programación</h4>
+                    <p>Preparatoria técnica en programación</p>
+                    <p>2016 - 2019</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <article>
+                <h3>Habilidades Técnicas</h3>
+
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>Paquetería de Office</li>
+                    <li>MySQL</li>
+                    <li>Mantenimiento preventivo de hadware</li>
+                </ul>
+            </article>
+        </section>
+        <hr></hr>
 
     </main>
 
     <footer>
-
-        <p>
-            Desarrollado por:
-            <strong>Jesús Yael Vizcaya Domínguez</strong>
-        </p>
-
-        <p>
-            Matrícula:
-            <strong>201194106</strong>
-        </p>
-
+        <p>© 2026 Jesús Yael Vizcaya Domínguez</p>
+        <p>Currículum desarrollado para la clase de Desarrollo Web</p>
+        <br>
     </footer>
-
-    <script src="script.js"></script>
 
 </body>
 </html>
