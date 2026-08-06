@@ -1,0 +1,40 @@
+
+    .card {
+      width: 250px;
+      height: 150px;
+      perspective: 1000px; /* da profundidad */
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg); /* giro al pasar el mouse */
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden; /* oculta el reverso */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .card-front {
+      background: #3498db; /* azul */
+    }
+
+    .card-back {
+      background: #e74c3c; /* rojo */
+      transform: rotateY(180deg); /* reverso */
+    }
