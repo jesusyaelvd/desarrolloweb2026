@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuenta Bancaria</title>
+</head>
+
+<body>
+  <h1>Simulador de Cuenta Bancaria</h1>
+
+  <p><strong>Titular:</strong> <span id="titular"></span></p>
+  <p><strong>Saldo actual:</strong> $<span id="saldo"></span></p>
+
+  <input type="number" id="cantidad" placeholder="Ingresa cantidad">
+  <br><br>
+
+  <button onclick="depositar()">Depositar</button>
+  <button onclick="retirar()">Retirar</button>
+  <button onclick="consultarSaldo()">Consultar Saldo</button>
+
+  <script>
+
+    const cuentaBancaria = {
+      titular: "Yael Vizcaya",
+      saldo: 1000,
+
+      depositar(cantidad) {
+        this.saldo += cantidad;
+      },
+
+      retirar(cantidad) {
+        this.saldo -= cantidad;
+      },
+
+      consultarSaldo() {
+        alert("Saldo actual: $" + this.saldo);
+      }
+    };
+
+    document.getElementById("titular").textContent = cuentaBancaria.titular;
+
+    function actualizarSaldo() {
+      document.getElementById("saldo").textContent = cuentaBancaria.saldo;
+    }
+
+    actualizarSaldo();
+
+    function obtenerCantidad() {
+      return parseFloat(document.getElementById("cantidad").value);
+    }
+
+    function depositar() {
+      cuentaBancaria.depositar(obtenerCantidad());
+      actualizarSaldo();
+    }
+
+    function retirar() {
+      cuentaBancaria.retirar(obtenerCantidad());
+      actualizarSaldo();
+    }
+
+    function consultarSaldo() {
+      cuentaBancaria.consultarSaldo();
+    }
+
+  </script>
+
+</body>
+</html>
