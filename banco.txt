@@ -1,0 +1,32 @@
+const cuentaBancaria = {
+    titular: "Yael Vizcaya",
+    saldo: 1000,
+
+    depositar: function(cantidad) {
+        this.saldo += cantidad;
+        console.log("Depósito realizado. Nuevo saldo: $" + this.saldo);
+    },
+
+    retirar: function(cantidad) {
+        if (cantidad <= this.saldo) {
+            this.saldo -= cantidad;
+            console.log("Retiro realizado. Nuevo saldo: $" + this.saldo);
+        } else {
+            console.log("Fondos insuficientes.");
+        }
+    },
+
+    consultarSaldo: function() {
+        return this.saldo;
+    }
+};
+
+console.log("Saldo inicial: $" + cuentaBancaria.consultarSaldo());
+
+cuentaBancaria.depositar(500);
+
+cuentaBancaria.retirar(300);
+
+console.log("Saldo actual: $" + cuentaBancaria.consultarSaldo());
+
+cuentaBancaria.retirar(1500);
