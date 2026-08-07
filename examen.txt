@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Blanca con mi nombre</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .nombre {
+            background-color: black;
+            color: white;
+            display: inline-block;
+            padding: 10px 20px;
+        }
+
+        .incorrecta {
+            color: red;
+        }
+
+        .correcta {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a mi página</h1>
+
+    <p class="nombre">Jesús Yael Vizcaya Domínguez</p>
+    <p>19 de junio de 2026</p>
+
+    <h2>Pregunta 4: ¿De qué color es "Texto3"?</h2>
+
+    <ul style="list-style-position: inside;">
+        <li class="incorrecta">Mi respuesta: Negro</li>
+        <li class="correcta">
+            Respuesta correcta: Rojo, porque está dentro de un elemento
+            <code>div</code> que hereda el estilo definido en
+            <code>.contenedor div { color: red; }</code>.
+        </li>
+    </ul>
+
+    <h2>Pregunta 6: ¿Hay márgenes distintos?</h2>
+
+    <ul style="list-style-position: inside;">
+        <li class="incorrecta">Mi respuesta: Sí</li>
+        <li class="correcta">
+            Respuesta correcta: No. No hay márgenes distintos definidos en
+            el CSS. La diferencia visual se debe a la estructura de los
+            elementos, no a márgenes diferentes.
+        </li>
+    </ul>
+
+</body>
+</html>
