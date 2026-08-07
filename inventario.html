@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Inventario</title>
+
+</head>
+
+<body>
+
+<h2>Inventario</h2>
+
+<button onclick="calcular()">
+Totales
+</button>
+
+<h3 id="resultado"></h3>
+
+<script>
+
+let productos = [
+
+{
+producto:"Laptop",
+precio:999,
+stock:15
+},
+
+{
+producto:"Mouse",
+precio:25,
+stock:50
+},
+
+{
+producto:"Teclado",
+precio:75,
+stock:30
+},
+
+{
+producto:"No break",
+precio:125,
+stock:45
+}
+
+];
+
+function calcular(){
+
+let total=0;
+
+for(let p of productos){
+
+    total += p.precio * p.stock;
+
+}
+
+document.getElementById("resultado").textContent =
+"Valor total del inventario: $" + total;
+
+}
+
+</script>
+
+</body>
+
+</html>
